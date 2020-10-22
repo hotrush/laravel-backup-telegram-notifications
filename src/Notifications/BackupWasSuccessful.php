@@ -17,6 +17,10 @@ class BackupWasSuccessful extends BaseNotification
                     'disk_name' => $this->diskName(),
                 ]),
                 'properties' => $this->backupDestinationProperties(),
+            ])
+            ->options([
+                'parse_mode' => 'HTML',
+                'disable_web_page_preview' => true
             ]);
     }
 }

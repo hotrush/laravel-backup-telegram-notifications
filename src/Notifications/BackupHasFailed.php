@@ -17,6 +17,10 @@ class BackupHasFailed extends BaseNotification
                 ]),
                 'exception' => $this->event->exception,
                 'properties' => $this->backupDestinationProperties(),
+            ])
+            ->options([
+                'parse_mode' => 'HTML',
+                'disable_web_page_preview' => true
             ]);
     }
 }
