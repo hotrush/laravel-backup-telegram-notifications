@@ -1,3 +1,5 @@
+<strong>{{ $message }}</strong>
+
 <strong>{{ trans('backup::notifications.exception_message_title') }}:</strong>
 {{ $exception->getMessage() }}
 <strong>{{ trans('backup::notifications.exception_trace_title') }}:</strong>
