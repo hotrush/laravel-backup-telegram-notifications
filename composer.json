@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hotrush\\SpatieBackup\\TelegramNotifications\\ServiceProvider"
+                "Hotrush\\SpatieBackup\\TelegramNotificationsServiceProvider"
             ]
         }
     }

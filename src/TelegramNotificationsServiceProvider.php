@@ -4,7 +4,7 @@ namespace Hotrush\SpatieBackup;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class ServiceProvider extends BaseServiceProvider
+class TelegramNotificationsServiceProvider extends BaseServiceProvider
 {
     /**
      * Bootstrap any application services.
