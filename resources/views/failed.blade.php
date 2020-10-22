@@ -2,8 +2,6 @@
 
 <strong>{{ trans('backup::notifications.exception_message_title') }}:</strong>
 {{ $exception->getMessage() }}
-<strong>{{ trans('backup::notifications.exception_trace_title') }}:</strong>
-{{ $exception->getTraceAsString() }}
 
 @if(isset($description))
     <i>{{ $description }}</i>
