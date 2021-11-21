@@ -1,10 +1,15 @@
 Extension for spatie/laravel-backup to add telegram notifications.
 
+| Version | spatie/laravel-backup version | Laravel version | PHP version |
+|---------|-------------------------------|-----------------|-------------|
+| ^1.0.0  | ^6.0.0                        | 5, 6, 7         | ^7.3, ^8.0  |
+| ^2.0.0  | ^7.0.0                        | 8               | ^8.0        |
+
 ### Installation
 
 ```
 composer require hotrush/laravel-backup-telegram-notifications
-``` 
+```
 
 ### Configuration
 
@@ -27,13 +32,15 @@ use NotificationChannels\Telegram\TelegramChannel;
 'notifications' => [
 
     'notifications' => [
-        \Hotrush\SpatieBackup\Notifications\BackupHasFailed::class => [TelegramChannel::class],
-        \Hotrush\SpatieBackup\Notifications\UnhealthyBackupWasFound::class => [TelegramChannel::class],
-        \Hotrush\SpatieBackup\Notifications\CleanupHasFailed::class => [TelegramChannel::class],
-        \Hotrush\SpatieBackup\Notifications\BackupWasSuccessful::class => [TelegramChannel::class],
-        \Hotrush\SpatieBackup\Notifications\HealthyBackupWasFound::class => [TelegramChannel::class],
-        \Hotrush\SpatieBackup\Notifications\CleanupWasSuccessful::class => [TelegramChannel::class],
+        \Hotrush\SpatieBackup\Notifications\Notifications\BackupHasFailedNotification::class => [TelegramChannel::class],
+        \Hotrush\SpatieBackup\Notifications\Notifications\UnhealthyBackupWasFoundNotification::class => [TelegramChannel::class],
+        \Hotrush\SpatieBackup\Notifications\Notifications\CleanupHasFailedNotification::class => [TelegramChannel::class],
+        \Hotrush\SpatieBackup\Notifications\Notifications\BackupWasSuccessfulNotification::class => [TelegramChannel::class],
+        \Hotrush\SpatieBackup\Notifications\Notifications\HealthyBackupWasFoundNotification::class => [TelegramChannel::class],
+        \Hotrush\SpatieBackup\Notifications\Notifications\CleanupWasSuccessfulNotification::class => [TelegramChannel::class],
     ],
+
+    'notifiable' => \Hotrush\SpatieBackup\Notifications\Notifiable::class,
 
     'telegram' => [
         'channel_id' => env('BACKUP_TELEGRAM_CHANNEL'),
