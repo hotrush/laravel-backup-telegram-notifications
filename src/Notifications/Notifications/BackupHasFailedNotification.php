@@ -1,18 +1,17 @@
 <?php
 
-namespace Hotrush\SpatieBackup\Notifications;
+namespace Hotrush\SpatieBackup\Notifications\Notifications;
 
-use Spatie\Backup\Notifications\Notifications\CleanupHasFailed as BaseNotification;
+use Spatie\Backup\Notifications\Notifications\BackupHasFailedNotification as BaseNotification;
 use NotificationChannels\Telegram\TelegramMessage;
 
-class CleanupHasFailed extends BaseNotification
+class BackupHasFailedNotification extends BaseNotification
 {
-    public function toTelegram($notifiable)
+    public function toTelegram($notifiable): TelegramMessage
     {
         return (new TelegramMessage)
-            ->to(config('backup.notifications.telegram.channel_id'))
             ->view('laravel-backup-tg-notifications::failed', [
-                'message' => trans('backup::notifications.cleanup_failed_subject', [
+                'message' => trans('backup::notifications.backup_failed_subject', [
                     'application_name' => $this->applicationName(),
                 ]),
                 'exception' => $this->event->exception,
