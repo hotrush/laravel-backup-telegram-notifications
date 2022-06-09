@@ -10,8 +10,8 @@
     ],
     "require": {
         "php": "^8.0",
-        "laravel-notification-channels/telegram": "^0.8.0",
-        "spatie/laravel-backup": "^7.0"
+        "laravel-notification-channels/telegram": "^0.8.0|^2.0",
+        "spatie/laravel-backup": "^7.0|^8.0"
     },
     "autoload": {
         "psr-4": {
