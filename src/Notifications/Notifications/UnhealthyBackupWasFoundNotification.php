@@ -17,6 +17,10 @@ class UnhealthyBackupWasFoundNotification extends BaseNotification
                 'exception' => $this->failure()->exception(),
                 'description' => $this->problemDescription(),
                 'properties' => $this->backupDestinationProperties(),
+            ])
+            ->options([
+                'parse_mode' => 'HTML',
+                'disable_web_page_preview' => true
             ]);
     }
 }
