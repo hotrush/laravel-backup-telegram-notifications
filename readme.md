@@ -1,10 +1,11 @@
 Extension for spatie/laravel-backup to add telegram notifications.
 
-| Version | spatie/laravel-backup version | Laravel version | PHP version |
-|---------|-------------------------------|-----------------|-------------|
-| ^1.0.0  | ^6.0.0                        | 5, 6, 7, 8      | ^7.3, ^8.0  |
-| ^2.0.0  | ^7.0.0, ^8.0.0                | 8, 9            | ^8.0        |
-| ^3.0.0  | ^8.0.0                        | 10              | >=8.1       |
+| Version | spatie/laravel-backup version | Laravel version | PHP version | Branch |
+|---------|-------------------------------|-----------------|-------------|--------|
+| ^1.0.0  | ^6.0.0                        | 5, 6, 7, 8      | ^7.3, ^8.0  | v1     |
+| ^2.0.0  | ^7.0.0, ^8.0.0                | 8, 9            | ^8.0        | v2     |
+| ^3.0.0  | ^8.0.0                        | 10              | >=8.1       | v3     |
+| ^4.0.0  | ^8.0.0                        | 11              | >=8.2       | master |
 
 ### Installation
 
